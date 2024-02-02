@@ -1,11 +1,10 @@
-# Common proprietary files - from Samsung package version A217NKSU5CUD3, unless pinned
+# Common proprietary files - from Samsung package version A217FXXS8DWC2, unless pinned
 
 ### CAMERA
 vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
 vendor/lib/hw/camera.exynos850.so
 -vendor/lib/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
-vendor/lib/vendor.samsung.camera.device@5.0-impl.so
 vendor/lib/vendor.samsung.hardware.camera.device@5.0.so
 vendor/lib/vendor.samsung.hardware.camera.provider@4.0.so
 vendor/lib/vendor.samsung.hardware.camera.provider@4.0-legacy.so
@@ -19,7 +18,6 @@ vendor/lib/libexynoscamera_plugin_utils.so
 vendor/lib/libexynoscamera_tdnr_plugin.so
 vendor/lib64/hw/camera.exynos850.so
 -vendor/lib64/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
-vendor/lib64/vendor.samsung.camera.device@5.0-impl.so
 vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
@@ -67,8 +65,8 @@ vendor/lib/hw/gralloc.exynos850.so
 vendor/lib64/hw/gralloc.exynos850.so
 
 ### GPS/GNSS
-vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
-vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
+vendor/bin/hw/vendor.samsung.hardware.gnss@2.1-service
+vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
 # GRAPICS_MALI
@@ -121,7 +119,6 @@ vendor/lib/libGrallocMapperCamera.so
 vendor/lib/libacryl.so
 vendor/lib/libexynosdisplay.so
 vendor/lib/libexynosgraphicbuffer.so
-vendor/lib/libexynosgscaler.so
 vendor/lib/libexynosscaler.so
 vendor/lib/libexynosutils.so
 vendor/lib/libexynosv4l2.so
@@ -131,7 +128,6 @@ vendor/lib64/libGrallocMapperCamera.so
 vendor/lib64/libacryl.so
 vendor/lib64/libexynosdisplay.so
 vendor/lib64/libexynosgraphicbuffer.so
-vendor/lib64/libexynosgscaler.so
 vendor/lib64/libexynosscaler.so
 vendor/lib64/libexynosutils.so
 vendor/lib64/libexynosv4l2.so
@@ -142,13 +138,11 @@ vendor/lib/hw/memtrack.exynos850.so
 
 ### SENSORS
 vendor/etc/sensors/hals.conf
-vendor/lib/hw/sensors.sensorhub.so
 vendor/lib/sensors.grip.so
-vendor/lib64/hw/sensors.sensorhub.so
 vendor/lib64/sensors.grip.so
 
 ### WIDEVINE
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib/libwvhidl.so
