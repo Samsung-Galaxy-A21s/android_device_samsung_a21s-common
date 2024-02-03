@@ -150,7 +150,7 @@ BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := universal3830
 TARGET_BOOTLOADER_BOARD_NAME := exynos3830
 TARGET_SOC := exynos850
-include hardware/samsung_slsi-linaro/config/BoardConfig3830.mk
+#include hardware/samsung_slsi-linaro/config/BoardConfig3830.mk
 
 ## Properties
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
