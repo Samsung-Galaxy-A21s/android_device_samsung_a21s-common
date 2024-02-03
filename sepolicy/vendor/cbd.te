@@ -1,1 +1,2 @@
-allow cbd self:capability2 block_suspend;
+dontaudit cbd self:capability dac_override;
+dontaudit cbd self:capability dac_read_search;
