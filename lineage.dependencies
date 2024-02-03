@@ -1,6 +1,6 @@
 [
     {
-        "repository": "android_device_samsung_a21s-sepolicy",
+        "repository": "Samsung-Galaxy-A21s/android_device_samsung_a21s-sepolicy",
         "target_path": "device/samsung/a21s-sepolicy"
     },
     {
@@ -40,7 +40,7 @@
         "target_path": "hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib"
     },
     {
-        "repository": "android_kernel_samsung_universal3830",
+        "repository": "Samsung-Galaxy-A21s/android_kernel_samsung_universal3830",
         "target_path": "kernel/samsung/universal3830"
     }
 ]
