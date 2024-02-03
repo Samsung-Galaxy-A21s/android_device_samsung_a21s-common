@@ -1,7 +1,7 @@
 [
     {
-        "repository": "android_device_samsung_slsi_sepolicy",
-        "target_path": "device/samsung_slsi/sepolicy"
+        "repository": "android_device_samsung_a21s-sepolicy",
+        "target_path": "device/samsung/a21s-sepolicy"
     },
     {
         "repository": "android_hardware_samsung",
