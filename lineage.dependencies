@@ -2,7 +2,7 @@
     {
         "repository": "Samsung-Galaxy-A21s/android_device_samsung_a21s-sepolicy",
         "target_path": "device/samsung/a21s-sepolicy",
-        "branch": "lineage-20"
+        "branch": "android-12"
     },
     {
         "repository": "android_hardware_samsung",
@@ -43,6 +43,6 @@
     {
         "repository": "Samsung-Galaxy-A21s/android_kernel_samsung_universal3830",
         "target_path": "kernel/samsung/universal3830",
-        "branch": "lineage-20"
+        "branch": "A12-S8-Physwizz-Kernel"
     }
 ]
