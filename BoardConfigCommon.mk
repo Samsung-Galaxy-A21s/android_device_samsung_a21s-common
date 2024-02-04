@@ -59,6 +59,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 # Broken build rules
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 ## Display
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
@@ -116,6 +117,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_SOURCE := kernel/samsung/universal3830
+TARGET_KERNEL_NO_LLVM_BINUTILS := true
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_PATH := /home/risky/LineageOS/kernel/samsung/universal3830/toolchain/clang/host/linux-x86/clang-r353983c
 
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
