@@ -81,7 +81,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1
 
 PRODUCT_PACKAGES += \
-    #android.hardware.composer.hwc3-service.slsi \
+    android.hardware.composer.hwc2.1-service.slsi \
     gralloc.exynos850 \
     libion
 
