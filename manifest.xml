@@ -302,6 +302,6 @@
         <transport>hwbinder</transport>
     </hal>
     <sepolicy>
-        <version>30.0</version>
+        <version>33.0</version>
     </sepolicy>
 </manifest>
