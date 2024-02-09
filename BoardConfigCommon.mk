@@ -116,11 +116,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_NO_GCC := false
 TARGET_KERNEL_SOURCE := kernel/samsung/universal3830
-TARGET_KERNEL_NO_LLVM_BINUTILS := true
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_PATH := /home/risky/LineageOS/kernel/samsung/universal3830/toolchain/clang/host/linux-x86/clang-r353983c
+TARGET_KERNEL_CLANG_PATH := /home/risky/LineageOS/device/samsung/proton-clang
 
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung

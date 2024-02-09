@@ -43,6 +43,6 @@
     {
         "repository": "Samsung-Galaxy-A21s/android_kernel_samsung_universal3830",
         "target_path": "kernel/samsung/universal3830",
-        "branch": "A12-S8-Physwizz-Kernel"
+        "branch": "A11-U5-Lineage-Kernel"
     }
 ]
