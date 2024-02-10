@@ -1,36 +1,92 @@
 <?xml version="2.0" encoding="UTF-8"?>
 <compatibility-matrix version="2.0" type="framework">
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.gnss</name>
-        <version>2.0</version>
-        <interface>
-            <name>ISehGnss</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.radio</name>
-        <version>2.2</version>
-        <interface>
-            <name>ISehRadio</name>
-            <instance>slot1</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.radio.bridge</name>
-        <version>2.0</version>
-        <interface>
-            <name>ISehBridge</name>
-            <instance>slot1</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.samsung.hardware.radio.channel</name>
-        <version>2.0</version>
-        <interface>
-            <name>ISehChannel</name>
-            <instance>epdgd</instance>
-            <instance>imsd</instance>
-        </interface>
-    </hal>
+            <name>vendor.samsung.hardware.camera.provider</name>
+            <version>4.0</version>
+            <interface>
+                <name>ISehCameraProvider</name>
+                <instance>legacy/0</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.samsung.hardware.health</name>
+            <version>2.0</version>
+            <interface>
+                <name>ISehHealth</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.samsung.hardware.nfc</name>
+            <version>2.0</version>
+            <interface>
+                <name>ISehNfc</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.samsung.hardware.radio</name>
+            <version>2.0-1</version>
+            <interface>
+                <name>ISehRadio</name>
+                <instance>slot1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.samsung.hardware.thermal</name>
+            <version>1.0</version>
+            <interface>
+                <name>ISehThermal</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.samsung.hardware.vibrator</name>
+            <version>2.0-2</version>
+            <interface>
+                <name>ISehVibrator</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.samsung_slsi.hardware.ExynosHWCServiceTW</name>
+            <version>1.0</version>
+            <interface>
+                <name>IExynosHWCServiceTW</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.samsung_slsi.hardware.configstore</name>
+            <version>1.0</version>
+            <interface>
+                <name>IExynosHWCConfigs</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.samsung.hardware.gnss</name>
+            <version>2.0</version>
+            <interface>
+                <name>ISehGnss</name>
+                <instance>default</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.samsung.hardware.radio.bridge</name>
+            <version>2.0</version>
+            <interface>
+                <name>ISehBridge</name>
+                <instance>slot1</instance>
+            </interface>
+        </hal>
+        <hal format="hidl" optional="true">
+            <name>vendor.samsung.hardware.radio.channel</name>
+            <version>2.0</version>
+            <interface>
+                <name>ISehChannel</name>
+                <instance>epdgd</instance>
+                <instance>imsd</instance>
+            </interface>
+        </hal>
 </compatibility-matrix>
