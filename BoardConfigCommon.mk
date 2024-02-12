@@ -104,6 +104,7 @@ endif
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_SYSTEM := system
 TARGET_USERIMAGES_USE_F2FS := true
 
 ## Kernel
@@ -111,7 +112,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_SOURCE := kernel/samsung/universal3830
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_PATH := /home/risky/LineageOS/device/samsung/proton-clang
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive selinux=0
 
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
@@ -140,6 +141,9 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 55574528
 
 BOARD_USES_METADATA_PARTITION := true
+
+# system/core and build/make
+AB_OTA_UPDATER := false
 
 BOARD_ROOT_EXTRA_FOLDERS := \
     efs

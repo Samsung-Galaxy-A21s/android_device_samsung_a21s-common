@@ -35,4 +35,4 @@ persist.bluetooth.samsung_samplerate.supported=true
 persist.device_config.runtime_native.usap_pool_enabled=true
 
 persist.sys.binary_xml=false
-ro.vndk.version=current
+ro.vndk.version=31
