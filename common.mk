@@ -136,7 +136,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/init.exynos850.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos850.usb.rc \
     $(COMMON_PATH)/configs/init/init.recovery.exynos850.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos850.rc \
     $(COMMON_PATH)/configs/init/init.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos850.root.rc \
-    $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
+    $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc \
     $(COMMON_PATH)/configs/init/init.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.rc
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
