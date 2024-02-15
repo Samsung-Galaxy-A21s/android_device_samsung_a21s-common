@@ -38,6 +38,9 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 ## Bluetooth
 BOARD_HAVE_BLUETOOTH_SLSI := true
 
+## Inherit prebuilt kernel properties
+# include device/samsung/a21s-kernel/BoardConfigCommon.mk
+
 ## Boot Image
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_BOOT_HEADER_NAME       := SRPTA30A005
@@ -58,6 +61,7 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --board $(BOARD_BOOT_HEADER_NAME)
+BOARD_KERNEL_CMDLINE += androidboot.hardware=exynos850 androidboot.selinux=enforce loop.max_part=7
 
 # Broken build rules
 BUILD_BROKEN_DUP_RULES := true
@@ -114,9 +118,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_SOURCE := kernel/samsung/universal3830
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_PATH := /home/risky/LineageOS/device/samsung/proton-clang
+TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_NO_KERNEL := false
+BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_DIR)
+BOARD_PREBUILT_DTBOIMAGE := $(BOARD_PREBUILT_DTBIMAGE_DIR)/dtbo.img
 
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung

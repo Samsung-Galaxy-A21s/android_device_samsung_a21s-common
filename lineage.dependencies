@@ -34,10 +34,5 @@
     {
         "repository": "android_hardware_samsung_slsi_scsc_wifibt_wpa_supplicant_lib",
         "target_path": "hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib"
-    },
-    {
-        "repository": "Samsung-Galaxy-A21s/android_kernel_samsung_universal3830",
-        "target_path": "kernel/samsung/universal3830",
-        "branch": "A11-U5-Lineage-Kernel"
     }
 ]
