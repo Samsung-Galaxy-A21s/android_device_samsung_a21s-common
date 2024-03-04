@@ -112,7 +112,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_SOURCE := kernel/samsung/a21s
+TARGET_KERNEL_SOURCE := kernel/samsung/universal3830
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_PATH := /home/risky/LineageOS/device/samsung/proton-clang
 

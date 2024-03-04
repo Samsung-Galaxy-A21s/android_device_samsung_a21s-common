@@ -37,7 +37,7 @@
     },
     {
         "repository": "android_kernel_samsung_a21s",
-        "target_path": "kernel/samsung/a21s",
+        "target_path": "kernel/samsung/universal3830",
         "branch": "lineage-20"
 
     }
