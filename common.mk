@@ -35,6 +35,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungDAP
 
+## Copy audio policy to vendor
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
@@ -46,25 +47,21 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(COMMON_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
 
-TARGET_EXCLUDES_AUDIOFX := true
-
-# Bluetooth
+## Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl:64 \
     android.hardware.bluetooth@1.0-service \
     libbt-vendor:64
 
+## Copy Bluetooth conf to Vendor
 PRODUCT_COPY_FILES += \
     hardware/samsung_slsi/libbt/conf/bt_did.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_did.conf \
     hardware/samsung_slsi/libbt/conf/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf
 
-# Camera
+## Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service_64 \
+    android.hardware.camera.provider@2.6-service_64 \
     libsensorndkbridge
-
-PRODUCT_PACKAGES += \
-    libhwjpeg
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -78,20 +75,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1
 
-PRODUCT_PACKAGES += \
-    hwcomposer.exynos850 \
-    gralloc.exynos850 \
-    libion
-
-# Dynamic Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+#PRODUCT_PACKAGES += \
+#    hwcomposer.exynos850 \
+#    gralloc.exynos850 \
+#    libion
 
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor:32 \
-    android.hardware.drm-service.clearkey
+    android.hardware.drm-service.clearkey \
+    libdrm.vendor
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -128,6 +124,10 @@ PRODUCT_PACKAGES += \
    libhwbinder \
    libhwbinder.vendor
 
+# Incremental FS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.incremental.enable=yes
+
 # init
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/fstab.exynos850:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos850 \
@@ -139,6 +139,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/init.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsung.rc \
     $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc \
     $(COMMON_PATH)/configs/init/init.fingerprint.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.rc
+
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
@@ -147,9 +148,9 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
     libkeymaster4_1support.vendor:64
 
-# Lineage Health
+# Lights
 PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
+    android.hardware.light-service.samsung
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -180,7 +181,8 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
-PRODUCT_ENFORCE_RRO_TARGETS += *
+DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-lineage
+PRODUCT_ENFORCE_RRO_TARGETS += framework-res SystemUI SettingsProvider CarrierConfig
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -236,7 +238,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor:64 \
     android.hardware.radio.config@1.2.vendor:64 \
-    android.hardware.radio.deprecated@1.0.vendor:64
+    android.hardware.radio.deprecated@1.0.vendor:64 \
+    secril_config_svc
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -269,6 +272,10 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.samsung
 
 # WiFi
 PRODUCT_PACKAGES += \
