@@ -17,7 +17,7 @@
      entries do not follow the convention, but all new entries should. -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="wifi_tether_configure_ssid_default" translatable="false">Galaxy A21s</string>
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Galaxy A21s 4G</string>
     <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
     <bool name="config_wifi_fast_bss_transition_enabled">true</bool>
     <bool name="config_wifi_p2p_mac_randomization_supported">false</bool>
